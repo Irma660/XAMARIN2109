@@ -30,9 +30,9 @@
         <Button Text="AC" Grid.Row="1" Grid.Column="0"
                 BackgroundColor="White" TextColor="Orange"
                 FontSize="36" CornerRadius="0" Clicked="OnClear" />
-        <ImageButton x:Name="borrar" Source="borrar.png"
-                     Grid.Row="1" Grid.Column="1"
-                     BackgroundColor="White" Clicked="OnSelect" />
+        <Button Text ="C" Grid.Row="1" Grid.Column="1"
+                BackgroundColor="White" TextColor="Orange"
+                FontSize="36" CornerRadius="0" Clicked="OnSelect" />
         <Button Text="%" Grid.Row="1" Grid.Column="2"
                 BackgroundColor="White" TextColor="Orange"
                 FontSize="36" CornerRadius="0" Clicked="OnSelect" />

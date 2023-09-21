@@ -81,6 +81,13 @@ namespace MiPrimerApp01.Views
                     break;
             }
         }
-        
+        void OnClear(object sender, EventArgs e)
+        {
+            valor1 = null;
+            valor2 = null;
+            operador = null;
+            resultado = null;
+            resultText.Text = "0";
+        }
     }
 }
