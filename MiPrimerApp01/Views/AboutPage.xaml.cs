@@ -89,5 +89,14 @@ namespace MiPrimerApp01.Views
             resultado = null;
             resultText.Text = "0";
         }
+        void OnClearr(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(resultText.Text))
+            {
+                resultText.Text = resultText.Text.Substring(0, resultText.Text.Length - 1); // Eliminar el último carácter
+            }
+        }
+        
+        
     }
 }

@@ -32,7 +32,7 @@
                 FontSize="36" CornerRadius="0" Clicked="OnClear" />
         <Button Text ="C" Grid.Row="1" Grid.Column="1"
                 BackgroundColor="White" TextColor="Orange"
-                FontSize="36" CornerRadius="0" Clicked="OnSelect" />
+                FontSize="36" CornerRadius="0" Clicked="OnClearr" />
         <Button Text="%" Grid.Row="1" Grid.Column="2"
                 BackgroundColor="White" TextColor="Orange"
                 FontSize="36" CornerRadius="0" Clicked="OnSelect" />
