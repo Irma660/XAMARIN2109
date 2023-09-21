@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerApp01.Views.AboutPage"
+             xmlns:vm="clr-namespace:MiPrimerApp01.ViewModels"
+             Title="{Binding Title}">
+
+    <Grid Padding ="5,0" RowSpacing="1" BackgroundColor="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="White" Text="0"
+               TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="End"
+               LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+         
+        <Button Text="AC" Grid.Row="1" Grid.Column="0"
+                BackgroundColor="White" TextColor="Orange"
+                FontSize="36" CornerRadius="0" Clicked="OnClear" />
+        <ImageButton x:Name="borrar" Source="borrar.png"
+                     Grid.Row="1" Grid.Column="1"
+                     BackgroundColor="White" Clicked="OnSelect" />
+        <Button Text="%" Grid.Row="1" Grid.Column=""
+
+    </Grid>
+</ContentPage>
