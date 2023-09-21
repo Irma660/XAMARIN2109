@@ -91,7 +91,7 @@
                 FontSize="36" CornerRadius="0" Clicked="OnSelect" />
         <Button Text="=" Grid.Row="5" Grid.Column="3"
                 BackgroundColor="White" TextColor="Orange"
-                FontSize="36" CornerRadius="0" Clicked="OnSelect" />
+                FontSize="36" CornerRadius="0" Clicked="OnResult" />
 
     </Grid>
 </ContentPage>
