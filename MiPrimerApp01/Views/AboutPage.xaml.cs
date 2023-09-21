@@ -16,5 +16,71 @@ namespace MiPrimerApp01.Views
         {
             InitializeComponent();
         }
+        void OnSelect(Object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+
+            if ("0123456789".Contains(button.Text) && (valor1 == null || operador == null))
+            {
+                resultText.Text = valor1.ToString() + button.Text;
+                valor1 = Convert.ToDouble(resultText.Text);
+            }
+            else if ("0123456789".Contains(button.Text) && (valor2 == null || operador != null))
+            {
+                resultText.Text = valor2.ToString() + button.Text;
+                valor1 = Convert.ToDouble(resultText.Text);
+            }
+            else if ("+-x/ ".Contains(button.Text) && valor1 != null)
+            {
+                operador = button.Text;
+            }
+
+            else
+                calcular(valor1, valor2, operador);
+        }
+        public void calcular(double? v1,double? v2, string op)
+        {
+            switch (op)
+            {
+                case "/":
+                    if(v2 != 0)
+                    {
+                        resultado = v1 / v2;
+                        resultText.Text = resultado.ToString();
+                        valor1 = resultado;
+                        valor2 = null;
+                    }
+                    else
+                    {
+                        resultText.Text = "NO SE PUEDE DIVIDIR";
+                    }
+                    break;
+                case "x":
+                    resultado = v1 * v2;
+                    resultText.Text = resultado.ToString();
+                    valor1 = resultado;
+                    valor2 = null;
+                    break;
+                case "+":
+                    resultado = v1 + v2;
+                    resultText.Text = resultado.ToString();
+                    valor1 = resultado;
+                    valor2 = null;
+                    break;
+                case "-":
+                    resultado = v1 - v2;
+                    resultText.Text = resultado.ToString();
+                    valor1 = resultado;
+                    valor2 = null;
+                    break;
+                case "%":
+                    resultado = v1 / 100;
+                    resultText.Text = resultado.ToString();
+                    valor1 = resultado;
+                    valor2 = null;
+                    break;
+            }
+        }
+        
     }
 }
